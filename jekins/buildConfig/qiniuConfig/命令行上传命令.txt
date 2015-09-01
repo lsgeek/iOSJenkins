@@ -1,0 +1,2 @@
+/Users/liushuai/Desktop/qshell/qshell_darwin_386 account MrUya7WYoSRlbf4B3yRqZzZqUZER7AIqtWLDnEdH ww6h8KJQH4STccF4YuB1EDw1RkVUokcGheK2OyOc
+/Users/liushuai/Desktop/qshell/qshell_darwin_386 fput iosapp jiyin360.ipa /Users/liushuai/.jenkins/jobs/360jiyin/workspace/.././builds/25/360jiyin_25.ipa
