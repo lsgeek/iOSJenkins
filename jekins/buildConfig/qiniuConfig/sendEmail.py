@@ -18,7 +18,7 @@ import json
 #appBuildVersion = json_result['data']['appBuildVersion']
 #appShortcutUrl = json_result['data']['appShortcutUrl']
 #邮件接受者
-mail_receivers = ['447896780@qq.com', '848949609@qq.com', '510146445@qq.com']
+mail_receivers = ['447896780@qq.com','2297369160@qq.com']
 #根据不同邮箱配置 host，user，和pwd
 mail_host = 'smtp.163.com'
 mail_user = 'lsgeek@163.com'
@@ -27,16 +27,16 @@ mail_to = ','.join(mail_receivers)
 msg = MIMEMultipart()
 
 environsString = '<h3>移动端iOS安装包</h3><p>'
-environsString += '<p>内网ipa包下载地址 : ' + '暂无' + '<p>'
-environsString += '<p>外网在线安装 : ' + '暂无' + '' + '<p>'
+environsString += '<p>内网ipa包下载地址 : ' + '暂无' + '</p>'
+environsString += '<p>外网在线安装 : ' + 'http://7xibuf.com1.z0.glb.clouddn.com/360jiyinbeta.html' + '</p>'
 #environsString += '<p>提示 : ' + '调试中，请忽略此邮件' + '' + '<p>'
 #environsString += '<li><a href="itms-services://?action=download-manifest&url=https://ssl.pgyer.com/app/plist/' + str(appKey) + '">手机直接安装</a></li>'
 message = environsString
-body = MIMEText(message, _subtype='html', _charset='utf-8')
+body = MIMEText(message,'html','utf-8')
 msg.attach(body)
 msg['To'] = mail_to
 msg['from'] = mail_user
-msg['subject'] = 'iOSxxx版本最新打包文件'
+msg['subject'] = 'iOS Beta版本最新打包文件'
 
 try:
     s = smtplib.SMTP()
@@ -45,7 +45,7 @@ try:
 
     s.sendmail(mail_user, mail_receivers, msg.as_string())
     s.close()
-
+    print msg.as_string()
     print 'success'
 except Exception, e:
     print e
